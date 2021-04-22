@@ -4,6 +4,7 @@
 private val appAnalytics = AppAnalytics(EventLogger(), UserPropertyLogger())
 
 ### Create an event
+```
  // Add name of event and type of event
     val event = AnalyticsEvent.newEvent("my_custom event", ActionType.ENTER)
         .put("key1", "value1")
@@ -13,7 +14,7 @@ private val appAnalytics = AppAnalytics(EventLogger(), UserPropertyLogger())
         .put(Bundle())
         // Enable or disable specific platform for this event
         .disableClevertap()
-            
+```            
 ### Send event
 appAnalytics.logEvent(event)
 
